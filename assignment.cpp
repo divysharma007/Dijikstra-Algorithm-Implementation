@@ -9,11 +9,13 @@ using namespace std;
  */
 vector<vector<pair<int,int>>> getNeighbours(int numberOfNodes,int numberOfEdges){
   vector<vector<pair<int,int>>>neighbours(numberOfNodes);
-
-   for(int i=0;i<numberOfEdges;i++){
-       int parentNode,childNode,edgeValue;
-       cin>>parentNode>>childNode>>edgeValue;
-       neighbours[parentNode].push_back({edgeValue, childNode});
+  cout << "Provide all the edges which are present in the graph" << endl;
+  cout << "Provide inputs as: <Parent> <Child> <Edge value>" << endl;
+  for (int i = 0; i < numberOfEdges; i++)
+  {
+      int parentNode, childNode, edgeValue;
+      cin >> parentNode >> childNode >> edgeValue;
+      neighbours[parentNode].push_back({edgeValue, childNode});
    }
    return neighbours;
 }
@@ -47,12 +49,14 @@ int numberOfNodes=neighbours.size();
 void printOutput(vector<int>distanceVector){
 int numberOfNodes=distanceVector.size();
    for(int node=0;node<numberOfNodes;node++)
-       cout << "Distance of node " <<node <<" from the source node is " <<distanceVector[node] << endl;
+       cout << "Shortest distance of node " <<node <<" from the source node is " <<distanceVector[node] << endl;
    
 }
 int main()
 {
     int numberOfNodes,numberOfEdges,sourceNode;
+    cout<< "Provide the number of nodes, edges and the source node which are present in the graph" <<endl;
+    cout<< "Provide input as: <Number of node> <Number of edges> <source node>" <<endl;
     cin>>numberOfNodes>>numberOfEdges>>sourceNode;
     vector<vector<pair<int,int>>> neighbours=getNeighbours(numberOfNodes,numberOfEdges);
     vector<int>distanceVector=findShortestPath(sourceNode,neighbours);

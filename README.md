@@ -1,6 +1,6 @@
 # Introduction
 Program to find the shortest path from a given source node to other nodes. \
-Used Dijikstra algorithm to get the output. The output is optimal in terms of memory and space requirements. \
+Used Dijikstra algorithm to get the output. The output is optimal in terms of memory and space requirements. 
 # Complexity
 Time Complexity - O((n+e)log(n)) \
 Space Complexity - O(n) \
