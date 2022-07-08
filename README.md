@@ -8,6 +8,7 @@ where n is the number of nodes and e is the number of edges
 
 # Assumptions
  - Directed acylic Graph (DAG)
+ - Connected graph
  - All edge values are positive
  - Maximum distance of a node from the source is less than 2^31-1(INT sotrage capacity)
  - n is less than (2^31-1)
